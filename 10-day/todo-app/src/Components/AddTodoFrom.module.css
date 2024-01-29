@@ -1,5 +1,5 @@
 .form {
-  border: 1px solid #efefef;
+  border: 1px solid #5d6332;
   display: flex;
   height: 64px;
   align-items: center;
@@ -24,6 +24,6 @@
   width: 20%;
   font-weight: bold;
   font-size: 1.2rem;
-  background-color: #efefef;
+  background-color: #bccf0b;
   color: #232323;
 }

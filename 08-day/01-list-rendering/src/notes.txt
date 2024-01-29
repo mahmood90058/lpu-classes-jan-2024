@@ -1,4 +1,0 @@
-props 
-list render
-click events
-change event

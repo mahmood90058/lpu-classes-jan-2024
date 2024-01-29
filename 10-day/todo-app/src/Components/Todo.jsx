@@ -1,17 +1,21 @@
+
 import { useState } from "react";
 import styles from "./Todo.module.css";
-import { ImCross } from "react-icons/im";
-import { MdEdit } from "react-icons/md";
+import { IoCloseOutline } from "react-icons/io5";
+import { FaEdit, FaRegCheckSquare, FaSquare, FaExclamationCircle } from "react-icons/fa";
 import EditTodo from "./EditTodo";
+
 function Todo({ todo, deleteTodo, toggleCompleted, updateTitle }) {
   const [isUpdateMode, setIsUpdateMode] = useState(false);
+
   function handleDelete() {
     deleteTodo(todo.id);
   }
+
   function handleToggle() {
-    console.log("inside handle toggle");
     toggleCompleted(todo.id);
   }
+
   if (isUpdateMode) {
     return (
       <EditTodo
@@ -22,13 +26,14 @@ function Todo({ todo, deleteTodo, toggleCompleted, updateTitle }) {
       />
     );
   }
+
   return (
     <div className={styles.todo}>
       <h3 className={todo.completed ? styles.completed : ""}>{todo.title}</h3>
 
       <div className={styles.buttonContainer}>
         <span onClick={() => setIsUpdateMode(true)} className={styles.btn}>
-          <MdEdit />
+          <FaEdit />
         </span>
         <input
           type="checkbox"
@@ -38,17 +43,17 @@ function Todo({ todo, deleteTodo, toggleCompleted, updateTitle }) {
           onChange={handleToggle}
           className={styles.todoCheckbox}
         />
+        {todo.priority && (
+          <span className={styles.priorityIcon}>
+            <FaExclamationCircle />
+          </span>
+        )}
         <span onClick={handleDelete} className={styles.btn}>
-          <ImCross />
+          <IoCloseOutline />
         </span>
       </div>
     </div>
   );
 }
 
-// edit todo
-// priority
-// sort
-
-// crud
 export default Todo;
