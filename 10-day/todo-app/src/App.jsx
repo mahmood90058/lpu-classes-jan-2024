@@ -21,6 +21,16 @@ function App() {
       title: "Write Code",
       completed: true,
     },
+    {
+      id: "4",
+      title: "practice to code",
+      completed: true,
+    },
+    {
+      id: "5",
+      title: "let's learn React",
+      completed: true,
+    },
   ]);
   function addTodo(newTodo) {
     setTodos((prevTodos) => [...prevTodos, newTodo]);

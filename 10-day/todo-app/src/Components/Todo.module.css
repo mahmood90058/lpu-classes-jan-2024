@@ -1,5 +1,7 @@
+
+
 .todo {
-  border: 2px solid #cdcdcd;
+  border: 2px solid #d80b0b;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -7,26 +9,40 @@
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
   height: 50px;
+  background: linear-gradient(to right, #0b1011, #052250); /* Gradient background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
 }
+
 .buttonContainer {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 .button {
-  /* border: 2px solid green; */
-  background-color: #efefef;
+  background-color: #dae729;
   color: #232323;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
+
+.button:hover {
+  background-color: #b3a009; /* Darker color on hover */
+}
+
 .completed {
   text-decoration: line-through;
   opacity: 0.7;
 }
+
 .todoCheckbox {
   width: 20px;
   height: 20px;
-  accent-color: white;
+  accent-color: rgb(255, 255, 255);
 }
+
 .btn {
   width: 20px;
   height: 20px;
@@ -34,4 +50,12 @@
   justify-content: center;
   cursor: pointer;
   align-items: center;
+  background-color: #704b45; /* Button background color */
+  border-radius: 50%; /* Circular shape */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
+
+.btn:hover {
+  background-color: #bd6363; /* Darker color on hover */
+}
+
